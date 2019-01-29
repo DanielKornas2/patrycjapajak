@@ -2,8 +2,11 @@
 @import './modules/normalize';
 
 
-body{
+* {
     color: $mainColor;
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -36,4 +39,5 @@ h2 {
     display: flex;
     justify-content: center;
     align-content: center;
+    overflow: hidden;
 }
