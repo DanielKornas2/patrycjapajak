@@ -1,3 +1,39 @@
-.test {
-    font-size: 13px;
+@import './modules/variables';
+@import './modules/normalize';
+
+
+body{
+    color: $mainColor;
+}
+
+h1 {
+    font-size: $fel;
+}
+
+h2 {
+    font-size: $fm;
+}
+
+.main-container {
+    display: flex;
+}
+
+.info-box {
+    width: 20%;
+
+    &__nav li {
+        list-style-type: none;
+        font-size: 12px;
+    }
+
+    &__nav a {
+        color: $secondColor;
+    }
+}
+
+.content-box {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
