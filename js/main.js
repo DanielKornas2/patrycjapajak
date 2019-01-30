@@ -25,8 +25,8 @@ loadData(infoBox, "./menu.html")
 
 
 
-if (!document.body.classList.contains('homepage')) {
-
+if (document.body.classList.contains('homepage')) {
+    console.log('homepage')
 
     let imageIndex = 0;
 
