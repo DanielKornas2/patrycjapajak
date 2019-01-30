@@ -1,7 +1,7 @@
 const prevImage = document.getElementById("prev");
 const nextImage = document.getElementById("next");
 const mainImage = document.getElementById("mainImage");
-const imagesListHomepage = ["https://picsum.photos/788/561", "https://picsum.photos/789/563", "https://picsum.photos/790/563", "https://picsum.photos/786/561"];
+const imagesListHomepage = ["https://picsum.photos/788/461", "https://picsum.photos/789/463", "https://picsum.photos/790/463", "https://picsum.photos/786/461"];
 
 let imageIndex = 0;
 
