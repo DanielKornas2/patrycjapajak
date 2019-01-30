@@ -24,14 +24,16 @@ const prevImageChange = (imagesSource) => {
     if (imageIndex == -1) {
         imageIndex = imagesSource.length - 1;
     }
-
+    
     mainImage.src = imagesSource[imageIndex];
 }
 
-//swiped-right and swiped-left - e listeners from very light pure-swipe library
-nextImage.addEventListener("click", () => nextImageChange(imagesListHomepage))
-mainImage.addEventListener("swiped-right", () => nextImageChange(imagesListHomepage))
 
-prevImage.addEventListener("click", () => prevImageChange(imagesListHomepage))
-mainImage.addEventListener("swiped-left", prevImageChange(imagesListHomepage))
+
+//swiped-right and swiped-left - e listeners from very light pure-swipe library
+nextImage.addEventListener("click", () => nextImageChange(imagesListHomepage));
+mainImage.addEventListener("swiped-right", () => nextImageChange(imagesListHomepage));
+
+prevImage.addEventListener("click", () => prevImageChange(imagesListHomepage));
+mainImage.addEventListener("swiped-left", prevImageChange(imagesListHomepage));
 
