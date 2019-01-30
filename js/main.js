@@ -7,16 +7,17 @@ const infoBox = document.getElementById("infoBox");
 const imagesListHomepage = ["https://picsum.photos/788/461", "https://picsum.photos/789/463", "https://picsum.photos/790/463", "https://picsum.photos/786/461"];
 
 const root = document.getElementById("root");
-function load(url, element)
-{
-    req = new XMLHttpRequest();
-    req.open("GET", url, false);
-    req.send(null);
+let txt = '';
+const xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = () => {
+  if(xmlhttp.status == 200 && xmlhttp.readyState == 4){
+    txt = xmlhttp.responseText;
+    root.innerHTML = txt;
+  }
+};
+xmlhttp.open("GET","./test.html",true);
+xmlhttp.send();
 
-    element.innerHTML = req.responseText; 
-}
-
-load("./test.html", root);
 
 
 
