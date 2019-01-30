@@ -364,7 +364,7 @@ h1 {
 }
 
 h2 {
-  font-size: 16px;
+  font-size: 11px;
   margin: 30px auto 0 auto;
 }
 
@@ -434,13 +434,17 @@ h2 {
   overflow: hidden;
 }
 
+.content-box__gallery__image {
+  width: 100%;
+}
+
 .content-box__gallery__controls {
   height: 10%;
 }
 
 .content-box__gallery__controls span {
   position: absolute;
-  top: 28%;
+  top: calc(50% - 107px);
   font-size: 16px;
   color: #fff;
   cursor: pointer;
@@ -500,6 +504,12 @@ h2 {
   }
   .content-box {
     width: 100%;
+  }
+  .content-box__gallery__controls span {
+    position: absolute;
+    top: calc(50% - 27px);
+    font-size: 13px;
+    padding: 20px 20px;
   }
 }
 

@@ -24,7 +24,7 @@ h1 {
 }
 
 h2 {
-    font-size: $fel;
+    font-size: $fs;
     margin: 30px auto 0 auto;
 }
 
@@ -80,14 +80,17 @@ h2 {
         position: relative;
         overflow: hidden;
 
-        &__image {}
+        &__image {
+            width: 100%;
+        }
 
         &__controls {
             height: 10%;
 
             span {
                 position: absolute;
-                top: 28%;
+                // 107px = line height + padding top
+                top: calc(50% - 107px);
                 font-size: $fel;
                 color: $white;
                 cursor: pointer;
@@ -125,7 +128,7 @@ h2 {
         flex-direction: column-reverse;
 
         h1 a {
-            color: $black; 
+            color: $black;
         }
 
         span {
@@ -155,9 +158,23 @@ h2 {
 
     .content-box {
         width: 100%;
+
+        &__gallery__controls {
+
+            span {
+                position: absolute;
+                // 27px = line height + padding top
+                top: calc(50% - 27px);
+                font-size: $fl;
+                padding: 20px 20px;
+            }
+        }
+
+
+
     }
 }
 
 .whiteColor {
-    color: $white!important;
+    color: $white !important;
 }
