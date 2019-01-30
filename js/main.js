@@ -6,6 +6,21 @@ const logoLink = document.getElementById("logoLink");
 const infoBox = document.getElementById("infoBox");
 const imagesListHomepage = ["https://picsum.photos/788/461", "https://picsum.photos/789/463", "https://picsum.photos/790/463", "https://picsum.photos/786/461"];
 
+const root = document.getElementById("root");
+function load(url, element)
+{
+    req = new XMLHttpRequest();
+    req.open("GET", url, false);
+    req.send(null);
+
+    element.innerHTML = req.responseText; 
+}
+
+load("./test.html", root);
+
+
+
+
 let imageIndex = 0;
 
 //function has argument - because we will have few gallersies, arg is array, each page = different image array

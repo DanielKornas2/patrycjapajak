@@ -358,14 +358,18 @@ a:hover {
 }
 
 h1 {
-  font-size: 13px;
   margin: 0;
-  text-transform: uppercase;
 }
 
 h2 {
   font-size: 11px;
   margin: 30px auto 0 auto;
+}
+
+h3 {
+  font-size: 13px;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 .logo {
@@ -469,6 +473,10 @@ h2 {
   text-align: justify;
 }
 
+.content-box__text p {
+  margin-top: 10px;
+}
+
 @media only screen and (max-width: 768px) {
   .logo {
     z-index: 3;
@@ -478,7 +486,7 @@ h2 {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
-  .logo h1 a {
+  .logo h3 a {
     color: #000;
   }
   .logo span {
@@ -487,8 +495,7 @@ h2 {
     font-size: 16px;
     color: #000;
   }
-  h1,
-  h2 {
+  h2, h3 {
     color: #fff;
   }
   .info-box {

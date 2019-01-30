@@ -18,14 +18,18 @@ a:hover {
 }
 
 h1 {
-    font-size: $fl;
-    margin: 0;
-    text-transform: uppercase;
+    margin: 0 ;
 }
 
 h2 {
     font-size: $fs;
     margin: 30px auto 0 auto;
+}
+
+h3 {
+    font-size: $fl;
+    margin: 0;
+    text-transform: uppercase;
 }
 
 .logo {
@@ -117,6 +121,10 @@ h2 {
         max-width: 700px;
         margin-top: 40px;
         text-align: justify;
+
+        p {
+            margin-top: 10px;
+        }
     }
 }
 
@@ -127,7 +135,7 @@ h2 {
         position: relative;
         flex-direction: column-reverse;
 
-        h1 a {
+        h3 a {
             color: $black;
         }
 
@@ -139,8 +147,7 @@ h2 {
         }
     }
 
-    h1,
-    h2 {
+    h2, h3 {
         color: $white;
     }
 
