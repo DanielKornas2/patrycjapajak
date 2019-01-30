@@ -2,21 +2,26 @@ const prevImage = document.getElementById("prev");
 const nextImage = document.getElementById("next");
 const mainImage = document.getElementById("mainImage");
 const hamburgerMenu = document.getElementById("hamburgerMenu");
+const logo = document.getElementById("logo");
 const logoLink = document.getElementById("logoLink");
 const infoBox = document.getElementById("infoBox");
 const imagesListHomepage = ["https://picsum.photos/788/461", "https://picsum.photos/789/463", "https://picsum.photos/790/463", "https://picsum.photos/786/461"];
 
-const root = document.getElementById("root");
-let txt = '';
-const xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = () => {
-  if(xmlhttp.status == 200 && xmlhttp.readyState == 4){
-    txt = xmlhttp.responseText;
-    root.innerHTML = txt;
-  }
-};
-xmlhttp.open("GET","./test.html",true);
-xmlhttp.send();
+const loadData = (selector,fileUrl) => {
+    let txt = '';
+    const xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = () => {
+        if (xmlhttp.status == 200 && xmlhttp.readyState == 4) {
+            txt = xmlhttp.responseText;
+            selector.innerHTML = txt;
+        }
+    };
+    xmlhttp.open("GET", fileUrl, true);
+    xmlhttp.send();
+}
+
+loadData(logo, "./logo.html")
+loadData(infoBox, "./menu.html")
 
 
 
@@ -32,7 +37,7 @@ const nextImageChange = (imagesSource) => {
     if (imageIndex == imagesSource.length) {
         imageIndex = 0;
     }
-   
+
     mainImage.src = imagesSource[imageIndex];
 }
 
@@ -43,7 +48,7 @@ const prevImageChange = (imagesSource) => {
     if (imageIndex == -1) {
         imageIndex = imagesSource.length - 1;
     }
-    
+
     mainImage.src = imagesSource[imageIndex];
 }
 
