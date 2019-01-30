@@ -45,7 +45,7 @@ h2 {
         display: none;
     }
 
-   
+
 }
 
 .main-container {
@@ -120,17 +120,44 @@ h2 {
 @media only screen and (max-width: 768px) {
 
     .logo {
+        z-index: 3;
+        position: relative;
+        flex-direction: column-reverse;
+
+        h1 a {
+            color: $black;
+        }
 
         span {
             display: inline-block;
+            text-align: right;
             font-size: $fel;
+            color: $black;
         }
     }
+
+    h1,
+    h2 {
+        color: $white;
+    }
+
     .info-box {
         display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        padding: 100px 0 0 20px;
+        z-index: 2;
+        background-color: $black;
     }
 
     .content-box {
         width: 100%;
     }
+}
+
+.whiteColor {
+    color: $white!important;
 }
