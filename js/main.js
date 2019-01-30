@@ -36,7 +36,7 @@ nextImage.addEventListener("click", () => nextImageChange(imagesListHomepage));
 mainImage.addEventListener("swiped-right", () => nextImageChange(imagesListHomepage));
 
 prevImage.addEventListener("click", () => prevImageChange(imagesListHomepage));
-mainImage.addEventListener("swiped-left", prevImageChange(imagesListHomepage));
+mainImage.addEventListener("swiped-left", () => prevImageChange(imagesListHomepage));
 
 
 hamburgerMenu.addEventListener("click", () => {
