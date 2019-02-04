@@ -1,16 +1,4 @@
-const loadData = (selector, fileUrl) => {
-    let txt = '';
-    const xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = () => {
-        if (xmlhttp.status == 200 && xmlhttp.readyState == 4) {
-            txt = xmlhttp.responseText;
-            selector.innerHTML = txt;
-        }
-    };
-    xmlhttp.open("GET", fileUrl, true);
-    xmlhttp.send();
-}
-
+require('../style/main.css');
 const initApp = (currentPageData) => {
     const prevImage = document.getElementById("prev");
     const nextImage = document.getElementById("next");
@@ -65,10 +53,6 @@ const initApp = (currentPageData) => {
 
 const imagesListHomepage = ["https://picsum.photos/788/461", "https://picsum.photos/789/463", "https://picsum.photos/790/463", "https://picsum.photos/786/461"];
 const imagesListXinaliq = ["https://powroty.do/wp-content/uploads/2018/07/azerbejdzan-22-1024x683.jpg", "https://powroty.do/wp-content/uploads/2018/07/azerbejdzan-26-1024x683.jpg", "https://powroty.do/wp-content/uploads/2018/07/azerbejdzan-24-1024x683.jpg", "https://powroty.do/wp-content/uploads/2018/07/azerbejdzan-88-1024x683.jpg", "https://powroty.do/wp-content/uploads/2018/07/azerbejdzan-80-1024x683.jpg", "https://powroty.do/wp-content/uploads/2018/07/azerbejdzan-15-1024x683.jpg"];
-
-
-loadData(infoBox, "./menu.html");
-
 
 switch (true) {
     case document.body.classList.contains('xinaliq'):
