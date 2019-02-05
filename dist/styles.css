@@ -1,3 +1,7 @@
+.whiteColor {
+  color: #fff !important;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -347,14 +351,13 @@ template {
   margin: 0;
   padding: 0;
   font-size: 11px;
+  font-family: sans-serif;
 }
 
-a {
+a,
+a:hover,
+a:active {
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 h1 {
@@ -367,7 +370,6 @@ h2 {
 }
 
 h3 {
-  font-size: 11px;
   margin: 0;
   text-transform: uppercase;
 }
@@ -376,7 +378,7 @@ h3 {
   width: 100%;
   height: 20px;
   margin-top: 40px;
-  padding: 0 20px;
+  padding: 10px 60px;
   text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -387,7 +389,10 @@ h3 {
 }
 
 .logo a {
-  color: #939393;
+  font-size: 18px;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  letter-spacing: 1.5px;
+  color: #302e2e;
 }
 
 .logo span {
@@ -398,24 +403,38 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 20px;
+  padding: 0 60px;
 }
 
 .info-box {
-  width: 20%;
+  width: 18%;
+}
+
+.info-box__nav ul {
+  margin-top: 40px;
+}
+
+.info-box__nav ul:first-of-type {
+  margin-top: 60px;
 }
 
 .info-box__nav li {
   list-style-type: none;
-  font-size: 12px;
+  text-transform: uppercase;
 }
 
 .info-box__nav a {
+  font-size: 10px;
   color: #939393;
+  text-decoration: none;
+}
+
+.info-box__nav a:hover {
+  color: #302e2e;
 }
 
 .content-box {
-  width: 80%;
+  width: 82%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -429,7 +448,6 @@ h3 {
   -ms-flex-line-pack: center;
       align-content: center;
   overflow: hidden;
-  margin-top: 30px;
 }
 
 .content-box__gallery {
@@ -449,14 +467,15 @@ h3 {
 .content-box__gallery__controls span {
   position: absolute;
   top: calc(50% - 107px);
-  font-size: 16px;
+  font-size: 13px;
   color: #fff;
+  opacity: 0.5;
   cursor: pointer;
   padding: 100px 20px;
 }
 
 .content-box__gallery__controls span:hover {
-  color: #939393;
+  opacity: 1;
 }
 
 .content-box__gallery__controls span:nth-child(1) {
@@ -478,24 +497,27 @@ h3 {
 }
 
 @media only screen and (max-width: 768px) {
+  .main-container {
+    padding: 0 30px;
+  }
   .logo {
     z-index: 3;
     position: relative;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    padding: 0 30px;
   }
   .logo h3 a {
+    z-index: 4;
     color: #000;
   }
   .logo span {
     display: inline-block;
+    top: 7px;
     text-align: right;
     font-size: 16px;
     color: #000;
   }
-  h2, h3 {
+  h2,
+  h3 {
     color: #fff;
   }
   .info-box {
@@ -504,22 +526,34 @@ h3 {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
-    padding: 100px 0 0 20px;
+    height: calc(100vh + 100px);
+    padding: 100px 0 0 30px;
     z-index: 2;
     background-color: #000;
   }
+  .info-box__nav a {
+    color: #fff;
+  }
   .content-box {
     width: 100%;
+    margin-top: 40px;
   }
   .content-box__gallery__controls span {
     position: absolute;
     top: calc(50% - 27px);
-    font-size: 13px;
+    font-size: 12px;
     padding: 20px 20px;
+  }
+  .content-box__gallery__controls span:nth-child(1) {
+    left: 2%;
+  }
+  .content-box__gallery__controls span:nth-child(2) {
+    right: 2%;
   }
 }
 
-.whiteColor {
-  color: #fff !important;
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  .info-box {
+    height: calc(100vw + 100px);
+  }
 }
