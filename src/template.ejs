@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
+    <%= require('./header.html') %>
     <title><%=htmlWebpackPlugin.options.pageTitle %> - Patrycja Pająk</title>
 </head>
-
 <body class=<%=htmlWebpackPlugin.options.className %>>
     <nav id="logo" class="logo">
         <h3><a href="index.html" id="logoLink">Patrycja Pająk</a></h3>
@@ -21,18 +15,22 @@
         </section>
         <section class="content-box">
             <div class="content-box__gallery">
-                <img src="<%=htmlWebpackPlugin.options.mainImage %>" alt="<%=htmlWebpackPlugin.options.pageTitle %>" class="content-box__gallery__image" id="mainImage" />
+                <img src="<%=htmlWebpackPlugin.options.mainImage %>" alt="<%=htmlWebpackPlugin.options.pageTitle %>"
+                    class="content-box__gallery__image" id="mainImage" />
                 <div class="content-box__gallery__controls">
                     <span id="prev" class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                     <span id="next" class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                 </div>
             </div>
             <article class="content-box__text">
-                <h1><%=htmlWebpackPlugin.options.pageTitle %></h1>
-                <p><%=htmlWebpackPlugin.options.projectDescription %></p>
+                <h1>
+                    <%=htmlWebpackPlugin.options.pageTitle %>
+                </h1>
+                <p>
+                    <%=htmlWebpackPlugin.options.projectDescription %>
+                </p>
             </article>
         </section>
     </div>
 </body>
-
 </html>
