@@ -1,6 +1,6 @@
 require('../style/main.css');
-const data = require('../data.json');
-
+import * as data from '../data.json';
+document.addEventListener("DOMContentLoaded", function(event) {
 const toggleMenu = () => {
     const hamburgerMenu = document.getElementById("hamburgerMenu");
     const logoLink = document.getElementById("logoLink");
@@ -80,3 +80,4 @@ switch (true) {
     default:
         toggleMenu();
 }
+});

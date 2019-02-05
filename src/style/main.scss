@@ -44,6 +44,8 @@ h3 {
     a {
         font-size: $xxfel;
         font-family: 'Saira Extra Condensed', sans-serif;
+        font-style: normal;
+        font-weight: 400;
         letter-spacing: 1.5px;
         color: $mainColor;
     }
@@ -168,7 +170,7 @@ h3 {
     .logo {
         z-index: 3;
         position: relative;
-        padding: 0 30px;
+        padding: 0 0 0 30px;
 
         h3 a {
             z-index: 4;
@@ -181,6 +183,10 @@ h3 {
             text-align: right;
             font-size: $fel;
             color: $black;
+
+            &::before {
+                padding: 30px;
+            }
         }
     }
 
@@ -219,7 +225,7 @@ h3 {
         }
 
         //hide contetn box when menu is open
-        &.show ~ .content-box {
+        &.show~.content-box {
             display: none;
         }
     }
