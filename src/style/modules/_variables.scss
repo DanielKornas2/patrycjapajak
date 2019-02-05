@@ -8,7 +8,14 @@ $black: #000;
 
 // Font-sizes
 
+$efs: 10px;
 $fs: 11px;
 $fm: 12px;
 $fl: 13px;
 $fel: 16px;
+$xxfel: 18px;
+
+
+.whiteColor {
+    color: $white !important;
+}
