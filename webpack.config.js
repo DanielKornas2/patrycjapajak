@@ -40,10 +40,17 @@ module.exports = {
       template: './src/template.ejs'
     }),
     new HtmlWebpackPlugin({
-      className: "contact",
+      className: "without-img",
       pageTitle: data.contact.pageTitle,
       projectDescription: data.contact.projectDescription,
       filename: 'kontakt.html',
+      template: './src/template-withoutimg.ejs'
+    }),
+    new HtmlWebpackPlugin({
+      className: "without-img",
+      pageTitle: data.bio.pageTitle,
+      projectDescription: data.bio.projectDescription,
+      filename: 'bio.html',
       template: './src/template-withoutimg.ejs'
     }),
     new MiniCssExtractPlugin({

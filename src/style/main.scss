@@ -18,6 +18,7 @@ a:active {
 
 h1 {
     margin: 0;
+    font-size: $xxfel;
 }
 
 h2 {
@@ -55,7 +56,7 @@ h3 {
 
 .main-container {
     display: flex;
-    padding: 0 60px;
+    padding: 0 60px 50px 60px;
 }
 
 .info-box {
@@ -139,6 +140,7 @@ h3 {
 
         p {
             margin-top: 10px;
+            text-align: left;
         }
     }
 }
@@ -146,7 +148,7 @@ h3 {
 @media only screen and (max-width: 768px) {
 
     .main-container {
-        padding: 0 30px;
+        padding: 0 30px 50px 30px;
     }
 
     .logo {
@@ -225,7 +227,7 @@ h3 {
     }
 }
 
-.contact {
+.without-img {
     & .content-box {
         justify-content: flex-start;
 
