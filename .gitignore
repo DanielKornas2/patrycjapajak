@@ -2,3 +2,4 @@ src/style/main.css
 src/style/main.css.map
 src/style/modules/_normalize.scss
 node_modules/
+dist/
