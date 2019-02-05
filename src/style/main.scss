@@ -18,7 +18,8 @@ a:active {
 
 h1 {
     margin: 0;
-    font-size: $xxfel;
+    font-size: $fel;
+    text-transform: uppercase;
 }
 
 h2 {
@@ -145,6 +146,17 @@ h3 {
     }
 }
 
+#xinaliq #xinaliq-menu,
+#toniemy1 #toniemy1-menu,
+#toniemy2 #toniemy2-menu,
+#tesknota #tesknota-menu,
+#dom #dom-menu,
+#silesiana #silesiana-menu,
+#bio #bio-menu,
+#kontakt #kontakt-menu {
+    color: $mainColor;
+}
+
 @media only screen and (max-width: 768px) {
 
     .main-container {
@@ -181,14 +193,20 @@ h3 {
         top: 0;
         left: 0;
         width: 100vw;
-        // 100vh + padding top
-        height: calc(100vh + 100px);
+        // 100vh + padding top and bottom
+        height: calc(100vh + 100px + 60px);
         padding: 100px 0 0 30px;
         z-index: 2;
         background-color: $black;
 
         &__nav a {
             color: $white;
+
+            &:hover,
+            &:active {
+                color: $white;
+                font-weight: bold;
+            }
         }
     }
 
@@ -214,16 +232,31 @@ h3 {
                 }
             }
         }
-
-
-
     }
+
+    #xinaliq #xinaliq-menu,
+    #toniemy1 #toniemy1-menu,
+    #toniemy2 #toniemy2-menu,
+    #tesknota #tesknota-menu,
+    #dom #dom-menu,
+    #silesiana #silesiana-menu,
+    #bio #bio-menu,
+    #kontakt #kontakt-menu {
+        color: $white;
+        font-weight: bold;
+    }
+
+    
+}
+
+.silesiana .content-box__gallery__controls {
+    display: none;
 }
 
 @media only screen and (max-width: 768px) and (orientation: landscape) {
     .info-box {
-        // 100vw + padding top , orientation landscape so vw instead of vh
-        height: calc(100vw + 100px);
+        // 100vw + padding top and bottom , orientation landscape so vw instead of vh
+        height: calc(100vw + 100px + 60px);
     }
 }
 

@@ -1,4 +1,5 @@
 require('../style/main.css');
+const data = require('../data.json');
 
 const toggleMenu = () => {
     const hamburgerMenu = document.getElementById("hamburgerMenu");
@@ -23,7 +24,7 @@ const initApp = (currentPageData) => {
 
         //function has argument - because we will have few gallersies, arg is array, each page = different image array
         const nextImageChange = (imagesSource) => {
-            console.log('clicknext')
+        
             imageIndex++;
 
             // when user sees the last image from array, index should be again 0 to loop images and prevent 404
@@ -35,7 +36,7 @@ const initApp = (currentPageData) => {
         }
 
         const prevImageChange = (imagesSource) => {
-            console.log('clickprev')
+       
             imageIndex--;
 
             // index cannot be -1 , we should loop images what means show the last image in arrray 
@@ -58,15 +59,23 @@ const initApp = (currentPageData) => {
 }
 
 
-const imagesListHomepage = ["https://picsum.photos/788/461", "https://picsum.photos/789/463", "https://picsum.photos/790/463", "https://picsum.photos/786/461"];
-const imagesListXinaliq = ["https://powroty.do/wp-content/uploads/2018/07/azerbejdzan-22-1024x683.jpg", "https://powroty.do/wp-content/uploads/2018/07/azerbejdzan-26-1024x683.jpg", "https://powroty.do/wp-content/uploads/2018/07/azerbejdzan-24-1024x683.jpg", "https://powroty.do/wp-content/uploads/2018/07/azerbejdzan-88-1024x683.jpg", "https://powroty.do/wp-content/uploads/2018/07/azerbejdzan-80-1024x683.jpg", "https://powroty.do/wp-content/uploads/2018/07/azerbejdzan-15-1024x683.jpg"];
+const imagesListXinaliq = data.xinaliq.imagesList;
+const imagesListToNieMy1 = data.toniemy1.imagesList;
+const imagesListToNieMy2 = data.toniemy2.imagesList;
+const imagesListTesknota = data.tesknota.imagesList;
 
 switch (true) {
     case document.body.classList.contains('xinaliq'):
         initApp(imagesListXinaliq);
         break;
-    case document.body.classList.contains('homepage'):
-        initApp(imagesListHomepage);
+    case document.body.classList.contains('toniemy1'):
+        initApp(imagesListToNieMy1);
+        break;
+    case document.body.classList.contains('toniemy2'):
+        initApp(imagesListToNieMy2);
+        break;
+    case document.body.classList.contains('tesknota'):
+        initApp(imagesListTesknota);
         break;
     default:
         toggleMenu();
