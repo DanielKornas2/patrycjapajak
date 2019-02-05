@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= require('./header.html') %>
+    <title><%=htmlWebpackPlugin.options.pageTitle %> - Patrycja Pająk</title>
+</head>
+<body class=<%=htmlWebpackPlugin.options.className %>>
+    <%= require('./logo.html') %>
+    <div class="main-container">
+        <section id="infoBox" class="info-box">
+            <%= require('./menu.html') %>
+        </section>
+        <section class="content-box">
+            <article class="content-box__text">
+                <h1>
+                    <%=htmlWebpackPlugin.options.pageTitle %>
+                </h1>
+                <p>
+                    <%=htmlWebpackPlugin.options.projectDescription %>
+                </p>
+            </article>
+        </section>
+    </div>
+</body>
+</html>

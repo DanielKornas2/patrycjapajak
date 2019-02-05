@@ -6,7 +6,7 @@
     border: 0;
     margin: 0;
     padding: 0;
-    font-size: $fs;
+    font-size: $efs;
     font-family: sans-serif;
 }
 
@@ -222,5 +222,15 @@ h3 {
     .info-box {
         // 100vw + padding top , orientation landscape so vw instead of vh
         height: calc(100vw + 100px);
+    }
+}
+
+.contact {
+    & .content-box {
+        justify-content: flex-start;
+
+        &__text {
+            margin-top: 50px;
+        }
     }
 }

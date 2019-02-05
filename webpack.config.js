@@ -13,27 +13,41 @@ module.exports = {
 
   // Dodałem moduł html loader zeby robic partiale w html i łatwiej zarządzać contentem
   module: {
-    rules: [
-      { test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader'] },
-      { test: /\.html$/, loader: 'html-loader' }
+    rules: [{
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
+      },
+      {
+        test: /\.html$/,
+        loader: 'html-loader'
+      }
     ]
   },
 
-// Definiuje sobie podstrony korzystajac z HtmlWebpackPlugin i customowych parametrow, m.in danych w z jsona
+  // Definiuje sobie podstrony korzystajac z HtmlWebpackPlugin i customowych parametrow, m.in danych w z jsona
   plugins: [
     new HtmlWebpackPlugin({
-        filename: 'index.html',
-        template: './src/template-homepage.ejs'
+      filename: 'index.html',
+      template: './src/template-homepage.ejs'
     }),
     new HtmlWebpackPlugin({
-        className: "xinaliq",
-        pageTitle: data.xinaliq.pageTitle,
-        projectDescription: data.xinaliq.projectDescription,
-        mainImage: data.xinaliq.mainImage,
-        filename: 'xinaliq.html',
-        template: './src/template.ejs'
+      className: "xinaliq",
+      pageTitle: data.xinaliq.pageTitle,
+      projectDescription: data.xinaliq.projectDescription,
+      mainImage: data.xinaliq.mainImage,
+      filename: 'xinaliq.html',
+      template: './src/template.ejs'
     }),
-    new MiniCssExtractPlugin({ filename: 'styles.css' })
+    new HtmlWebpackPlugin({
+      className: "contact",
+      pageTitle: data.contact.pageTitle,
+      projectDescription: data.contact.projectDescription,
+      filename: 'kontakt.html',
+      template: './src/template-withoutimg.ejs'
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'styles.css'
+    })
   ]
-  
+
 }
