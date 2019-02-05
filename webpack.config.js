@@ -33,6 +33,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       className: "xinaliq",
       pageTitle: data.xinaliq.pageTitle,
+      projectTitle: data.xinaliq.pageTitle,
       projectDescription: data.xinaliq.projectDescription,
       mainImage: data.xinaliq.mainImage,
       filename: 'xinaliq.html',
@@ -49,5 +50,4 @@ module.exports = {
       filename: 'styles.css'
     })
   ]
-
 }

@@ -1,10 +1,12 @@
 {
     "xinaliq": {
         "pageTitle": "Xinaliq",
+        "projectTitle": "Xinaliq",
         "projectDescription": "Lorem ipsum dolor sit amet, <br>consectetur adipiscing elit. Praesent fringilla diam et quam pellentesque efficitur. Nam malesuada sed ex in feugiat.<br><br> Proin ultricies pellentesque ante quis vehicula. Phasellus vestibulum, libero a lobortis pharetra, mi metus faucibus leo, non dapibus lectus nunc tincidunt risus.Ut vitae euismod erat. Donec et orci vel tortor blandit feugiat. Sed auctor pharetra ex a fermentum. Donec luctus pharetra sem, ac vehicula turpis interdum in. Mauris scelerisque libero vel ipsum pulvinar euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut convallis porttitor augue, et pretium urna finibus sed. Praesent pretium ante id ultricies imperdiet. Nulla egestas condimentum mauris, at efficitur enim tempus eu.",
         "mainImage": "https://powroty.do/wp-content/uploads/2018/07/azerbejdzan-22-1024x683.jpg"
     },
     "contact": {
+        "pageTitle": "Kontakt",
         "projectDescription": "kontakt@patrycjapajak.com"
     }
 }
